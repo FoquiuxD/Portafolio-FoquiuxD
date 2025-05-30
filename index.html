@@ -23,7 +23,7 @@
     <section class="section who-section">
       <h2>¿QUIÉN SOY?</h2>
       <p>
-        Estoy escribiendo esto a las 3 de la mañana escuchando JOJI, filosofando un poco para hacer este portafolio, donde quiero mostrarte quien soy y porque soy un buen prospecto.
+        Estoy escribiendo esto a las 3 de la mañana escuchando JOJI, filosofando un poco para hacer este portafolio, donde quiero mostrarte quien soy y porque soy un buen prospecto
       </p>
       <div class="skills-grid">
         <div class="column">
@@ -46,6 +46,17 @@
     <!-- Introducción -->
     <section class="section intro-section">
       <h2>INTRODUCCIÓN</h2>
+
+      <!-- Imágenes desde Imgur -->
+      <div class="img-container">
+        <blockquote class="imgur-embed-pub" lang="en" data-id="SOlUMvR">
+          <a href="https://imgur.com/SOlUMvR">View  post on imgur.com</a>
+        </blockquote>
+        <blockquote class="imgur-embed-pub" lang="en" data-id="B77isZY">
+          <a href="https://imgur.com/B77isZY">View  post on imgur.com</a>
+        </blockquote>
+      </div>
+
       <p>
         Sigo siendo yo Fabián Eduardo Urra Favi. Pero también soy FoquiuxD. ¿Por qué no presentarme con mi alter ego? Este portafolio no es el típico que ves todos los días. Y sí, quizá en este momento estés pensando ¿y este loco? pero no. No estoy loco. Solo decidí mostrarme como soy: creativo, versátil, y con un enfoque distinto. Esto no es una máscara, es una forma de hacer que mi trabajo hable por mí, sin encajar a la fuerza en moldes que no van conmigo.
       </p>
@@ -128,10 +139,13 @@
           entry.target.classList.add('active');
         }
       });
-    }, { threshold: 0.2 });
+    }, { threshold: 0.1 });
 
     sections.forEach(section => observer.observe(section));
   </script>
+
+  <!-- Script para Imgur -->
+  <script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
 
 </body>
 </html>

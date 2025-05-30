@@ -64,14 +64,8 @@ body, html {
 }
 
 @keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
+  to { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; transform: translateY(30px); }
 }
 
 /* Títulos */
@@ -81,7 +75,7 @@ body, html {
   color: #ebdbc2;
 }
 
-/* ¿Quién soy? */
+/* Sección ¿Quién soy? */
 .who-section p {
   font-size: 1.1rem;
   max-width: 600px;

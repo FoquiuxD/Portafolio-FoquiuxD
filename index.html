@@ -46,6 +46,15 @@
     <!-- Introducción -->
     <section class="section intro-section">
       <h2>INTRODUCCIÓN</h2>
+
+      <!-- Imágenes desde Imgur -->
+      <div class="img-container">
+        <blockquote class="imgur-embed-pub" lang="en" data-id="B77isZY"><a href="https://imgur.com/B77isZY">View post on imgur.com</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+        </blockquote>
+        <blockquote class="imgur-embed-pub" lang="en" data-id="SOlUMvR"><a href="https://imgur.com/SOlUMvR">View post on imgur.com</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+        </blockquote>
+      </div>
+
       <p>
         Sigo siendo yo Fabián Eduardo Urra Favi. Pero también soy FoquiuxD. ¿Por qué no presentarme con mi alter ego?
         Este portafolio no es el típico que ves todos los días. Y sí, quizá en este momento estés pensando ¿y este loco? pero no.
@@ -127,6 +136,23 @@
     </section>
 
   </main>
+
+  <!-- Scripts -->
+  <script>
+    const sections = document.querySelectorAll('.section');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    sections.forEach(section => observer.observe(section));
+  </script>
+
+  <!-- Script para imágenes de Imgur -->
+  <script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
 
 </body>
 </html>

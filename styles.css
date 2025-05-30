@@ -1,130 +1,284 @@
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body,
-html {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+body, html {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0f0f0f;
+  color: #fff;
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
+/* Scroll Container */
+.scroll-container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
 .section {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   position: relative;
-  scroll-snap-align: start;
+  padding: 4rem 2rem;
   transition: background-color 0.5s ease;
-}
-
-.section h1,
-.section h2,
-.section p {
   opacity: 0;
-  transform: translateY(40px);
+  transform: translateY(50px);
   transition: all 1s ease;
 }
 
-.section.active h1,
-.section.active h2,
-.section.active p,
-.section.active .box,
-.section.active ul li {
+.section.active {
   opacity: 1;
   transform: translateY(0);
 }
 
-.section-bg-gradient {
-  background: linear-gradient(to right, #4f46e5, #9333ea, #db2777);
-  color: white;
+/* Section Hero */
+.section-hero {
+  background: linear-gradient(to bottom, #0f0f0f, #1a1a1a);
   text-align: center;
+  position: relative;
 }
 
-.section-bg-gray {
-  background-color: #f3f4f6;
-  text-align: center;
-  padding: 2rem;
+.section-hero h1 {
+  font-size: 6rem;
+  letter-spacing: 2px;
+  color: #db2777;
+  font-weight: 900;
+  text-transform: uppercase;
 }
 
-.section-bg-white {
-  background-color: white;
-  text-align: center;
-  padding: 2rem;
-}
-
-.section-intro {
-  background-color: white;
+.names {
+  position: absolute;
+  top: 10%;
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  justify-content: space-between;
+  padding: 0 4rem;
+  font-size: 1.5rem;
+  color: #a0a0a0;
+  opacity: 0;
+  animation: fadeInUp 1s forwards;
+  animation-delay: 0.5s;
 }
 
-.section-contact {
-  background-color: #f3f4f6;
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+}
+
+/* Section Who */
+.section-who {
+  background-color: #121212;
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+}
+
+.section-who h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #fcd34d;
+}
+
+.section-who p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #ccc;
+}
+
+.flex-container {
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  gap: 2rem;
   flex-wrap: wrap;
-  padding: 2rem;
+  margin-top: 2rem;
+}
+
+.column {
+  width: 45%;
+}
+
+.box {
+  background: #1c1c1c;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  color: #eee;
+  font-weight: 500;
+  border-left: 4px solid #db2777;
+  transition: transform 0.3s ease;
+}
+
+.box:hover {
+  transform: translateX(5px);
+}
+
+/* Section Intro */
+.section-intro {
+  background-color: #0f0f0f;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.section-intro h2 {
+  font-size: 2.5rem;
+  color: #facc15;
+  margin: 2rem 0;
 }
 
 .img-container {
   display: flex;
   justify-content: space-between;
-  max-width: 1200px;
-  margin: auto;
   gap: 2rem;
   margin-bottom: 2rem;
+  flex-wrap: wrap;
 }
 
-blockquote {
-  width: 48%;
+/* Comparison Section */
+.section-comparison {
+  background-color: #121212;
+  padding: 4rem 2rem;
+  text-align: center;
 }
 
-.name-right,
-.name-left {
-  position: absolute;
-  top: 5rem;
+.section-comparison h2 {
+  font-size: 2.5rem;
+  color: #fcd34d;
+}
+
+.section-comparison p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #aaa;
+}
+
+.comparison-grid {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.grid-column {
+  width: 45%;
+}
+
+.grid-column h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: #facc15;
+}
+
+.grid-column ul li {
+  background: #1c1c1c;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  color: #ddd;
+  border-left: 3px solid #db2777;
+}
+
+/* Content Section */
+.section-content {
+  background-color: #0f0f0f;
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+}
+
+.section-content .label {
+  font-size: 0.9rem;
+  color: #a0a0a0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.section-content h2 {
+  font-size: 2.5rem;
+  color: #facc15;
+  margin: 1rem 0;
+}
+
+.section-content p {
+  font-size: 1.1rem;
+  color: #bbb;
+}
+
+/* Contact Section */
+.section-contact {
+  background-color: #121212;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 4rem 2rem;
+}
+
+.contact-card {
+  background: #1c1c1c;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 40%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  text-align: center;
+}
+
+.contact-card h3 {
   font-size: 1.5rem;
-  color: white;
-  opacity: 0;
-  transition: transform 1s ease, opacity 1s ease;
+  color: #facc15;
+  margin-bottom: 1rem;
 }
 
-.name-right {
-  right: 3rem;
+.contact-card ul {
+  list-style: none;
+  padding: 0;
 }
 
-.name-left {
-  left: 3rem;
+.contact-card ul li {
+  margin-bottom: 1rem;
 }
 
-.section-bg-gradient.active .name-right,
-.section-bg-gradient.active .name-left {
-  opacity: 1;
-  transform: translateX(0);
+.contact-card a {
+  color: #db2777;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-.section-bg-gradient.active .name-right {
-  animation: slideInRight 1s ease forwards;
+.contact-card a:hover {
+  color: #facc15;
 }
 
-.section-bg-gradient.active .name-left {
-  animation: slideInLeft 1s ease forwards;
-}
+@media (max-width: 768px) {
+  .section-hero h1 {
+    font-size: 4rem;
+  }
 
-@keyframes slideInRight {
-  from { transform: translateX(100px); opacity: 0; }
-  to { transform: translateX(0); opacity: 1; }
-}
+  .names {
+    font-size: 1.2rem;
+    padding: 0 2rem;
+  }
 
-@keyframes slideInLeft {
-  from { transform: translateX(-100px); opacity: 0; }
-  to { transform: translateX(0); opacity:
+  .contact-card {
+    width: 90%;
+  }
+
+  .img-container {
+    flex-direction: column;
+  }
+}

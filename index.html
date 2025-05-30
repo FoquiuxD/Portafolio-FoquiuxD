@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>FoquiuxD | Portfolio</title>
   <link rel="stylesheet" href="styles.css"/>
+
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css"  rel="stylesheet">
 </head>
 <body>
 
@@ -25,22 +28,20 @@
   </header>
 
   <!-- ¿Quién soy? -->
-  <section id="about" class="section">
+  <section id="about" class="section" data-aos="fade-up">
     <div class="container">
       <h2>¿Quién soy?</h2>
       <p>
-        Soy Fabián Eduardo Urra, pero también soy FoquiuxD. Este portafolio no es el típico que ves todos los días.
-        No estoy loco. Solo decidí mostrarme como soy: creativo, versátil, y con un enfoque distinto.
+        Estoy escribiendo esto a las 3 de la mañana escuchando JOJI, filosofando un poco para hacer este portafolio, donde quiero mostrarte quien soy y porque soy un buen prospecto.
       </p>
       <p>
-        Me gusta hacer videos, edición, fotografía, stream y eventos culturales. Tengo experiencia en marketing,
-        inteligencia artificial, producción audiovisual y mucho más.
+        Soy Fabián Eduardo Urra Favi, pero también soy FoquiuxD. Este portafolio no es el típico que ves todos los días... y ahí es donde empieza lo bueno.
       </p>
     </div>
   </section>
 
   <!-- Habilidades -->
-  <section id="skills" class="section dark">
+  <section id="skills" class="section dark" data-aos="fade-up">
     <div class="container">
       <h2>Habilidades y Experiencia</h2>
       <ul>
@@ -59,13 +60,14 @@
   </section>
 
   <!-- Portafolio -->
-  <section id="portfolio" class="section">
+  <section id="portfolio" class="section" data-aos="fade-up">
     <div class="container">
       <h2>Mi Portafolio</h2>
-      <p>No es cine de alto presupuesto... pero es único. Tal vez pienses que no te sirvo... y ahí es donde te detengo.</p>
-
+      <p>
+        Lo que vas a ver no es cine de alto presupuesto, ni las fotos más pulidas. Pero hay algo que sí vas a notar: esto no lo haría cualquiera.
+      </p>
       <div class="portfolio-grid">
-        <div class="item"><a href="https://youtu.be/PswLTixmHZ0"  target="_blank">🎬 Video Destacado</a></div>
+        <div class="item"><a href="https://youtu.be/PswLTixmHZ0"  target="_blank">🎬 Docuemntal Metepec</a></div>
         <div class="item"><a href="https://www.youtube.com/@GentePrudente"  target="_blank">🎥 Canal de YouTube</a></div>
         <div class="item"><a href="https://www.tiktok.com/@licfoquiuxd"  target="_blank">📱 TikTok</a></div>
         <div class="item"><a href="https://drive.google.com/drive/folders/1cI0ueOxROn0K7HjWEX9YQGsMNGkGBq8K"  target="_blank">📁 Contenido Académico</a></div>
@@ -74,10 +76,12 @@
   </section>
 
   <!-- Contacto -->
-  <section id="contact" class="section dark">
+  <section id="contact" class="section dark" data-aos="fade-up">
     <div class="container">
       <h2>Contacto</h2>
-      <p>Sí llegaste hasta aquí… tal vez una entrevista no nos caería nada mal, ¿no crees?</p>
+      <p>
+        Si llegaste hasta aquí… tal vez una entrevista no nos caería nada mal, ¿no crees?
+      </p>
       <div class="socials">
         <a href="https://www.youtube.com/@GentePrudente"  target="_blank">YouTube</a> |
         <a href="https://www.tiktok.com/@licfoquiuxd"  target="_blank">TikTok</a> |
@@ -92,6 +96,15 @@
       <p>&copy; 2025 FoquiuxD – Todos los derechos reservados</p>
     </div>
   </footer>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script> 
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
 
 </body>
 </html>

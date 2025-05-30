@@ -38,21 +38,13 @@
           <div class="skill">Le gusta hacer videos</div>
           <div class="skill">Creativo</div>
           <div class="skill">Agilidad mental</div>
-          <div class="skill">Conocimiento de las redes sociales</div>
+          <div class="skill">Conocimiento de redes sociales</div>
         </div>
       </div>
     </section>
 
     <!-- Introducción -->
     <section class="section intro-section">
-      <div class="img-container">
-        <blockquote class="imgur-embed-pub" lang="en" data-id="SOlUMvR">
-          <a href="https://imgur.com/SOlUMvR">View  post on imgur.com</a>
-        </blockquote>
-        <blockquote class="imgur-embed-pub" lang="en" data-id="B77isZY">
-          <a href="https://imgur.com/B77isZY">View  post on imgur.com</a>
-        </blockquote>
-      </div>
       <h2>INTRODUCCIÓN</h2>
       <p>
         Sigo siendo yo Fabián Eduardo Urra Favi. Pero también soy FoquiuxD. ¿Por qué no presentarme con mi alter ego? Este portafolio no es el típico que ves todos los días. Y sí, quizá en este momento estés pensando ¿y este loco? pero no. No estoy loco. Solo decidí mostrarme como soy: creativo, versátil, y con un enfoque distinto. Esto no es una máscara, es una forma de hacer que mi trabajo hable por mí, sin encajar a la fuerza en moldes que no van conmigo.
@@ -71,4 +63,73 @@
             <li>Diplomado de más de 120h en marketing</li>
             <li>Diplomado en uso de inteligencia artificial</li>
             <li>3 años fotografo de la quimera metepec con acreditaciones</li>
-            <li>Un cortometraje
+            <li>Un cortometraje con reconocimiento de mi universidad</li>
+            <li>Hice un documental de metepec y se proyectó en el museo del barro</li>
+            <li>Experiencia con premiere y photoshop</li>
+          </ul>
+        </div>
+        <div class="grid-column">
+          <h3>Lo atípico</h3>
+          <ul>
+            <li>Me gusta grabar videos</li>
+            <li>Hago videos y los subo a youtube</li>
+            <li>Tengo un podcast (ahorita está pausado)</li>
+            <li>Conozco el metaverso, hice un ensayo de eso</li>
+            <li>Me gusta estar en el metaverso</li>
+            <li>Streamer de videojuegos</li>
+            <li>Me subí a hacer stand up</li>
+            <li>Me gustan los videojuegos de simulación</li>
+            <li>Agilidad mental, si se presenta un problema buscare la solución más rápida pero la más efectiva</li>
+            <li>Hago eventos culturales, de bandas emergentes del valle de México</li>
+            <li>Nací en Chile, pero soy orguyosamente mexicano</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contenido -->
+    <section class="section content-section">
+      <p class="label">Es un portafolio</p>
+      <h2>¿Y EL CONTENIDO?</h2>
+      <p>
+        Antes de seguir, déjame darte contexto. Lo que vas a ver no es cine de alto presupuesto, ni las fotos más pulidas. Pero hay algo que sí vas a notar: esto no lo haría cualquiera. Tal vez pienses “este chavo no me sirve” … y ahí es donde te detengo. Claro que te sirvo. No solo manejo cámaras, también sé adaptarme, resolver y trabajar con lo que tengo. De hecho, ambos cortometrajes que verás aquí enfrentaron obstáculos fuertes incluso antes de grabarse. Si te da curiosidad saber qué pasó y cómo lo resolví, eso ya te dice algo: te generé intriga. Y si llegaste hasta aquí… tal vez una entrevista no nos caería nada mal, ¿no crees?
+      </p>
+    </section>
+
+    <!-- Contacto -->
+    <section class="section contact-section">
+      <div class="contact-card">
+        <h3>Fabian Eduardo Urra Favi</h3>
+        <ul>
+          <li><a href="https://drive.google.com/drive/folders/1cI0ueOxROn0K7HjWEX9YQGsMNGkGBq8K?usp=sharing" target="_blank">Portafolio Académico</a></li>
+          <li><a href="https://youtu.be/PswLTixmHZ0?si=La0iBQD54LMrpPdB" target="_blank">Cortometraje Metepec</a></li>
+        </ul>
+      </div>
+      <div class="contact-card">
+        <h3>FoquiuxD</h3>
+        <ul>
+          <li><a href="https://www.youtube.com/@FoquiuxD" target="_blank">YouTube</a></li>
+          <li><a href="https://www.youtube.com/@GentePrudente" target="_blank">Podcast</a></li>
+          <li><a href="https://www.tiktok.com/@licfoquiuxd?is_from_webapp=1&sender_device=pc" target="_blank">TikTok</a></li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Scripts -->
+  <script>
+    const sections = document.querySelectorAll('.section');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    sections.forEach(section => observer.observe(section));
+  </script>
+
+</body>
+</html>

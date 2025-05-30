@@ -6,7 +6,7 @@
 
 body, html {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #0f0f0f;
+  background-color: #0f0f0f; /* Fondo negro uniforme */
   color: #fff;
   overflow-x: hidden;
   scroll-behavior: smooth;
@@ -27,6 +27,7 @@ body, html {
   justify-content: center;
   flex-direction: column;
   padding: 4rem 2rem;
+  background-color: #0f0f0f; /* Mismo fondo en todas las secciones */
   opacity: 0;
   transform: translateY(50px);
   transition: all 1s ease;
@@ -39,7 +40,6 @@ body, html {
 
 /* Hero Section */
 .hero-section {
-  background: linear-gradient(to bottom, #0f0f0f, #1a1a1a);
   text-align: center;
 }
 
@@ -81,18 +81,13 @@ body, html {
   color: #ebdbc2;
 }
 
-/* Who Section */
-.who-section {
-  background-color: #121212;
-  text-align: center;
-  max-width: 800px;
-  margin: auto;
-}
-
+/* ¿Quién soy? */
 .who-section p {
   font-size: 1.1rem;
-  margin-bottom: 2rem;
+  max-width: 600px;
+  margin: 2rem auto;
   color: #ccc;
+  text-align: center;
 }
 
 .skills-grid {
@@ -115,42 +110,53 @@ body, html {
   transition: transform 0.3s ease;
 }
 
-.column .skill:hover {
+.skill:hover {
   transform: translateX(5px);
 }
 
 /* Intro Section */
 .intro-section {
-  background-color: #0f0f0f;
   text-align: center;
   padding: 4rem 2rem;
 }
 
 .intro-section h2 {
   font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Imgur Embeds */
+.img-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
   margin: 2rem 0;
+}
+
+.img-container blockquote {
+  width: 48%;
 }
 
 /* Comparación */
 .comparison-section {
-  background-color: #121212;
   padding: 4rem 2rem;
   text-align: center;
 }
 
 .comparison-section h2 {
   font-size: 2.5rem;
+  margin-bottom: 1rem;
 }
 
 .comparison-section p {
   font-size: 1.2rem;
-  margin-bottom: 2rem;
   color: #aaa;
+  margin-bottom: 2rem;
 }
 
 .comparison-grid {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   gap: 2rem;
   flex-wrap: wrap;
 }
@@ -177,10 +183,8 @@ body, html {
 
 /* Contenido */
 .content-section {
-  background-color: #0f0f0f;
   text-align: center;
-  max-width: 800px;
-  margin: auto;
+  padding: 4rem 2rem;
 }
 
 .content-section .label {
@@ -198,23 +202,19 @@ body, html {
 .content-section p {
   font-size: 1.1rem;
   color: #bbb;
+  max-width: 700px;
+  margin: auto;
 }
 
 /* Contacto */
 .contact-section {
-  background-color: #121212;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 4rem 2rem;
 }
 
 .contact-wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   gap: 2rem;
-  width: 100%;
-  max-width: 900px;
   flex-wrap: wrap;
 }
 
@@ -277,6 +277,15 @@ body, html {
     font-size: 1.2rem;
     flex-direction: column;
     gap: 1rem;
+  }
+
+  .img-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .img-container blockquote {
+    width: 100%;
   }
 
   .contact-wrapper {

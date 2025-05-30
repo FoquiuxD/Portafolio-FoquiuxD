@@ -119,7 +119,7 @@ body, html {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   color: #eee;
   font-weight: 500;
-  border-left: 4px solid var(--accent-pink);
+  border-left: 4px solid var(#e0bd39);
   transition: transform 0.3s ease;
 }
 
